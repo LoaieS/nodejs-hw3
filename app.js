@@ -18,7 +18,7 @@ const server = http.createServer(async (req, res) => {
         res.end(fileContent);
     }
     catch (err) {
-        // If the 
+        // If the file fails to load, show an appropriate response
         res.writeHead(404, {"content-type": 'text/html'});
         res.end(`<h1>Page could not be loaded!</h1>`);
     }
